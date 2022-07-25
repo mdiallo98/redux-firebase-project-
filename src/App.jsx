@@ -5,7 +5,9 @@ import Navigation from './routes/navigation/navigation.component';
 const App = () => {
   return (
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+      </Route>
     </Routes>
   );
 };
