@@ -5,7 +5,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from 'firebase/auth';
-// TODO: Replace the following with your app's Firebase project configuration
+
 const firebaseConfig = {
   apiKey: 'AIzaSyCJ9mMvP_6DPPBA48S4qAUS7YfF_XG0x3c',
   authDomain: 'e-commerce-8c7e9.firebaseapp.com',
@@ -25,4 +25,4 @@ provider.setCustomParameters({
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = signInWithPopup();
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
